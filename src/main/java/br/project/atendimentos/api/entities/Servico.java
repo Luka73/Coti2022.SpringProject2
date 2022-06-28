@@ -1,6 +1,7 @@
 package br.project.atendimentos.api.entities;
 
 import lombok.*;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class Servico {
     @Column(name = "nome", length = 150, nullable = false)
     private String nome;
     @Column(name = "preco", nullable = false)
-    private String preco;
+    private Double preco;
     @ManyToMany
     @JoinTable(
             name = "servico_profissional", // nome da tabela associativa

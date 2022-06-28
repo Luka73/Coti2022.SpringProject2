@@ -2,6 +2,7 @@ package br.project.atendimentos.api.entities;
 
 
 import lombok.*;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -24,4 +25,6 @@ public class Profissional {
     private String telefone;
     @ManyToMany(mappedBy = "profissionais")
     private List<Servico> servicos;
+    @OneToMany(mappedBy = "profissional") //Aqui coloca o atributo da classe Atendimento que está fazendo o mapeamento
+    private List<Atendimento> atendimentos;
 }

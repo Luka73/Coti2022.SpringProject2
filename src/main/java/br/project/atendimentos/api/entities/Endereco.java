@@ -1,6 +1,7 @@
 package br.project.atendimentos.api.entities;
 
 import lombok.*;
+
 import javax.persistence.*;
 
 @Entity

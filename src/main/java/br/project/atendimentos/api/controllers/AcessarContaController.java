@@ -1,12 +1,11 @@
 package br.project.atendimentos.api.controllers;
 
-import javax.transaction.Transactional;
-
 import br.project.atendimentos.api.entities.Cliente;
 import br.project.atendimentos.api.helpers.MD5Helper;
 import br.project.atendimentos.api.repositories.IClienteRepository;
 import br.project.atendimentos.api.requests.AcessarContaPostRequest;
 import br.project.atendimentos.api.security.TokenSecurity;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import io.swagger.annotations.ApiOperation;
+import javax.transaction.Transactional;
 
 @Transactional
 @Controller

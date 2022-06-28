@@ -1,8 +1,9 @@
 package br.project.atendimentos.api.entities;
 
-import java.util.Date;
-import javax.persistence.*;
 import lombok.*;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "ATENDIMENTO")
@@ -27,4 +28,7 @@ public class Atendimento {
     @ManyToOne
     @JoinColumn(name = "idservico", nullable = false)
     private Servico servico;
+    @ManyToOne
+    @JoinColumn(name = "idprofissional", nullable = false)
+    private Profissional profissional;
 }
